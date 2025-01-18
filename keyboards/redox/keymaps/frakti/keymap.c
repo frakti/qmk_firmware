@@ -18,10 +18,10 @@ enum layers {
 #define _WRD_RGT LALT(KC_RGHT)
 
 
-const key_override_t l_parenthese_key = ko_make_basic(MOD_MASK_ALT, KC_G, S(KC_9));
-const key_override_t r_parenthese_key = ko_make_basic(MOD_MASK_ALT, KC_H, S(KC_0));
-const key_override_t l_curly_bracket_key = ko_make_basic(MOD_MASK_ALT, KC_F, S(KC_LEFT_BRACKET));
-const key_override_t r_curly_bracket_key = ko_make_basic(MOD_MASK_ALT, KC_J, S(KC_RIGHT_BRACKET));
+const key_override_t l_parenthese_key = ko_make_basic(MOD_MASK_ALT, KC_G, KC_LEFT_PAREN);
+const key_override_t r_parenthese_key = ko_make_basic(MOD_MASK_ALT, KC_H, KC_RIGHT_PAREN);
+const key_override_t l_curly_bracket_key = ko_make_basic(MOD_MASK_ALT, KC_F, KC_LEFT_CURLY_BRACE);
+const key_override_t r_curly_bracket_key = ko_make_basic(MOD_MASK_ALT, KC_J, KC_RIGHT_CURLY_BRACE);
 const key_override_t l_square_bracket_key = ko_make_basic(MOD_MASK_ALT, KC_D, KC_LEFT_BRACKET);
 const key_override_t r_square_bracket_key = ko_make_basic(MOD_MASK_ALT, KC_K, KC_RIGHT_BRACKET);
 
@@ -41,13 +41,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌────────┬────────┬────────┬────────┬────────┬────────┐                                           ┌────────┬────────┬────────┬────────┬────────┬────────┐
      KC_MPLY ,KC_1    ,KC_2    ,KC_3    ,KC_4    ,KC_5    ,                                            KC_6    ,KC_7    ,KC_8    ,KC_9    ,KC_0    ,KC_BSPC ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐                         ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_TAB  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,FKC_LC_B,                          KC_DEL  ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P    ,KC_MINS ,
+     KC_TAB  ,KC_Q    ,KC_W    ,KC_E    ,KC_R    ,KC_T    ,XXXXXXX ,                          KC_DEL  ,KC_Y    ,KC_U    ,KC_I    ,KC_O    ,KC_P    ,KC_MINS ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┤                         ├────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_ESC  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,FKC_LC_W,                          KC_ENT  ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_SCLN ,KC_QUOT ,
+     KC_ESC  ,KC_A    ,KC_S    ,KC_D    ,KC_F    ,KC_G    ,FKC_EQL ,                          KC_ENT  ,KC_H    ,KC_J    ,KC_K    ,KC_L    ,KC_SCLN ,KC_QUOT ,
   //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-     KC_GRV  ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_EQL  ,XXXXXXX ,        KC_LBRC ,KC_RBRC ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_BSLS ,
+     KC_GRV  ,KC_Z    ,KC_X    ,KC_C    ,KC_V    ,KC_B    ,KC_LC_W ,FKC_LC_B,        KC_LBRC ,KC_RBRC ,KC_N    ,KC_M    ,KC_COMM ,KC_DOT  ,KC_SLSH ,KC_BSLS ,
   //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-     TG(_NAV),KC_2    ,KC_LCTL ,KC_LALT ,     KC_LSFT ,    KC_SPC  ,KC_LGUI ,        KC_RGUI ,KC_SPC  ,    KC_RSFT ,     KC_RALT ,KC_RCTL ,XXXXXXX ,MO(_NAV)
+     TG(_NAV),XXXXXXX ,KC_LCTL ,KC_LALT ,     KC_LSFT ,    KC_SPC  ,KC_LGUI ,        KC_RGUI ,KC_SPC  ,    KC_RSFT ,     KC_RALT ,KC_RCTL ,XXXXXXX ,MO(_NAV)
   //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
   ),
 
